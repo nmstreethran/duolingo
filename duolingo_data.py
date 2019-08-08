@@ -1,6 +1,6 @@
 #%%
 # import libraries
-import duolingo, json, csv, pandas
+import duolingo, json, pandas
 
 #%%
 # import login information saved in a separate file
@@ -17,7 +17,7 @@ nb_NO = lingo.get_vocabulary(language_abbr = 'nb') # Norwegian (Bokmål)
 de_DE = lingo.get_vocabulary(language_abbr = 'de') # German
 
 #%%
-# save vocab data as json
+# save vocabulary data as json
 # use indent >0 to pretty print the output
 with open('nb_NO.json', 'w') as f:
     json.dump(nb_NO, f, indent = 2)
@@ -26,7 +26,7 @@ with open('de_DE.json', 'w') as f:
     json.dump(de_DE, f, indent = 2)
 
 #%%
-# save vocab data as csv
+# save vocabulary data as csv
 # use cp1252 encoding to print accented latin characters
 df_nb = pandas.DataFrame(nb_NO['vocab_overview'])
 df_nb.to_csv("nb_NO.csv", encoding = "cp1252")
