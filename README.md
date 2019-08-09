@@ -2,6 +2,15 @@
 
 My [Duolingo](https://www.duolingo.com/) vocabulary list, extracted using a Python script into JSON and CSV
 
+## Files
+
+Example of `login.py`:
+
+```py
+myusername = 'your_duolingo_username'
+mypassword = 'your_duolingo_password'
+```
+
 ## License
 
 MIT License

@@ -11,14 +11,14 @@ from login import *
 lingo = duolingo.Duolingo(myusername, password = mypassword)
 
 #%%
-# extract vocab data for each language from site
+# extract vocabulary data for each language from site
 nb_NO = lingo.get_vocabulary(language_abbr = 'nb') # Norwegian (Bokmål)
 
 de_DE = lingo.get_vocabulary(language_abbr = 'de') # German
 
 #%%
 # save vocabulary data as json
-# use indent >0 to pretty print the output
+# use indent > 0 to pretty print the output
 with open('nb_NO.json', 'w') as f:
     json.dump(nb_NO, f, indent = 2)
 
