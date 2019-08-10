@@ -1,6 +1,6 @@
 # Duolingo
 
-My [Duolingo](https://www.duolingo.com/) vocabulary list, extracted using a Python script into JSON and CSV
+My [Duolingo](https://www.duolingo.com/) vocabulary list, extracted using a Python script into JSON and CSV [WIP]
 
 ## Files
 
@@ -26,9 +26,10 @@ Python packages
 Duolingo
 
 - [Vocabulary overview](https://www.duolingo.com/vocabulary/overview)
+- Dictionary (`https://d2.duolingo.com/api/1/dictionary/hints/<target>/<source>?token=<words>`)
 
 ## Future work
 
-- including translations
+- ~~including translations~~
 - removing unnecessary columns
 - assigning index and sorting columns

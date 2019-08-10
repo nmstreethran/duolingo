@@ -106,6 +106,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Other files --------------------------------
+# Other files / folders --------------------------------
 
 login.py
