@@ -67,7 +67,7 @@ for l in lang:
     vocab_df = vocab_df.merge(vocab_merge, on=['word_string']) 
 
     # drop unnecessary columns
-    vocab_df = vocab_df.drop(['last_practiced_ms', 'lexeme_id', 'normalized_string', 'related_lexemes', 'skill_url_title'], axis=1)
+    vocab_df = vocab_df.drop(['last_practiced_ms', 'lexeme_id', 'normalized_string', 'related_lexemes', 'skill_url_title', 'id', 'strength'], axis=1)
 
     # sort values by skill
     vocab_df = vocab_df.sort_values(['skill'])
