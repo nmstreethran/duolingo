@@ -31,5 +31,5 @@ Duolingo
 ## Future work
 
 - ~~including translations~~
-- removing unnecessary columns
-- assigning index and sorting columns
+- ~~removing unnecessary columns~~
+- ~~assigning index and sorting columns~~

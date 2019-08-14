@@ -109,3 +109,4 @@ venv.bak/
 # Other files / folders --------------------------------
 
 login.py
+.vscode/
