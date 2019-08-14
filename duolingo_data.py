@@ -69,8 +69,8 @@ for l in lang:
     # drop unnecessary columns
     vocab_df = vocab_df.drop(['last_practiced_ms', 'lexeme_id', 'normalized_string', 'related_lexemes', 'skill_url_title', 'id', 'strength'], axis=1)
 
-    # sort values by skill
-    vocab_df = vocab_df.sort_values(['skill'])
+    # sort values by skill, then by word_string
+    vocab_df = vocab_df.sort_values(['skill', 'word_string'])
 
     # save vocabulary data as csv
     # use cp1252 encoding to print accented latin characters
