@@ -1,8 +1,10 @@
 # Duolingo
 
-My [Duolingo](https://www.duolingo.com/) vocabulary list, extracted using a Python script into JSON and CSV. Updated every week or so. 
+My [Duolingo](https://www.duolingo.com/) vocabulary with English translations, extracted using a Python script into JSON and CSV formats. Updated every week or so. 
 
-I am currently learning Norwegian (Bokmål). I sometimes try the German and Irish Gaelic courses too.
+I am currently learning Norwegian (Bokmål). I sometimes try the German and Irish Gaelic courses too, and will start learning Latin once it's released.
+
+Duolingo has a [built-in feature to display learned words](https://www.duolingo.com/words). However, this is only available for a number of languages (in my case, only for German). It also does not display the translations within the learned words table. This Python script resolves these issues by producing CSV files of the vocabulary with English translations.
 
 ## Required Python packages
 
@@ -39,5 +41,5 @@ CSV files with vocabulary (including translations):
 
 ## Credits
 
-- [Duolingo vocabulary overview](https://www.duolingo.com/vocabulary/overview)
-- Duolingo dictionary (`https://d2.duolingo.com/api/1/dictionary/hints/<target>/<source>?token=<words>`)
+- [Duolingo vocabulary overview](https://www.duolingo.com/vocabulary/overview): used to extract learned vocabulary
+- Duolingo dictionary (`https://d2.duolingo.com/api/1/dictionary/hints/<target>/<source>?token=<words>`): used to translate learned words into English

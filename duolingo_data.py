@@ -32,7 +32,7 @@ for l in lang:
     # drop duplicate words
     vocab_df = vocab_df.drop_duplicates('word_string')
 
-    # translating words to english
+    # translating words into english
     # define a generator to split the list of words to be translated to chunks 
     # (to prevent 'Exception: Could not get translations' caused by long lists)
     def splitlist(mylist, chunk_size):
@@ -67,7 +67,7 @@ for l in lang:
     vocab_df = vocab_df.merge(vocab_merge, on=['word_string']) 
 
     # drop unnecessary columns
-    vocab_df = vocab_df.drop(['last_practiced_ms', 'lexeme_id', 'normalized_string', 'related_lexemes', 'skill_url_title', 'id', 'strength'], axis=1)
+    vocab_df = vocab_df.drop(['id', 'last_practiced_ms', 'lexeme_id', 'normalized_string', 'related_lexemes', 'skill_url_title', 'strength'], axis=1)
 
     # sort values by skill, then by word_string
     vocab_df = vocab_df.sort_values(['skill', 'word_string'])
