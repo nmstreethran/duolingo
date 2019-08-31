@@ -12,7 +12,7 @@ lingo = duolingo.Duolingo(myusername, password=mypassword)
 
 #%%
 # list of languages
-lang = ['nb', 'de', 'ga'] # Norwegian (Bokmål), German, Irish Gaelic
+lang = ['nb', 'de', 'ga', 'la'] # Norwegian (Bokmål), German, Irish Gaelic, Latin
 
 #%%
 # extracting data for each language in a loop
