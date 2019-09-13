@@ -3,12 +3,12 @@
 import duolingo, json, pandas
 
 #%%
-# import login information saved in a separate file
-from login import *
+# import login information saved in a separate file (login.py)
+import login
 
 #%%
 # enter login information
-lingo = duolingo.Duolingo(myusername, password=mypassword)
+lingo = duolingo.Duolingo(login.myusername, password=login.mypassword)
 
 #%%
 # list of languages

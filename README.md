@@ -14,7 +14,7 @@ Duolingo has a [built-in feature to display learned words](https://www.duolingo.
 
 ## Files
 
-Python script: [duolingo_data.py](/duolingo_data.py)
+Python script: [duolingo_data.py](duolingo_data.py)
 
 `login.py` stores the username and password. For example:
 
@@ -25,21 +25,21 @@ mypassword = 'my_duolingo_password'
 
 JSON files with vocabulary:
 
-- Norwegian (Bokmål): [vocab_nb.json](/vocab_nb.json)
-- Latin: [vocab_la.json](/vocab_la.json)
-- German: [vocab_de.json](/vocab_de.json)
-- Irish Gaelic: [vocab_ga.json](/vocab_ga.json)
+- Norwegian (Bokmål): [vocab_nb.json](vocab_nb.json)
+- Latin: [vocab_la.json](vocab_la.json)
+- German: [vocab_de.json](vocab_de.json)
+- Irish Gaelic: [vocab_ga.json](vocab_ga.json)
 
 CSV files with vocabulary (including translations):
 
-- Norwegian (Bokmål): [vocab_nb.csv](/vocab_nb.csv)
-- Latin: [vocab_la.csv](/vocab_la.csv)
-- German: [vocab_de.csv](/vocab_de.csv)
-- Irish Gaelic: [vocab_ga.csv](/vocab_ga.csv)
+- Norwegian (Bokmål): [vocab_nb.csv](vocab_nb.csv)
+- Latin: [vocab_la.csv](vocab_la.csv)
+- German: [vocab_de.csv](vocab_de.csv)
+- Irish Gaelic: [vocab_ga.csv](vocab_ga.csv)
 
 ## License
 
-[MIT License](/LICENSE)
+[MIT License](LICENSE)
 
 ## Credits
 
