@@ -108,5 +108,9 @@ venv.bak/
 
 # Other files / folders --------------------------------
 
+## login information
 login.py
+
+# VS Code settings
 .vscode/
+*.code-workspace
