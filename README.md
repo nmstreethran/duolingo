@@ -2,7 +2,7 @@
 
 Extracting learned [Duolingo](https://www.duolingo.com/) vocabulary with their English translations using the unofficial Duolingo API and a Python script.
 
-Duolingo has a [built-in feature to display learned words](https://www.duolingo.com/words). However, this is only available for a number of languages (in my case, only for German). It also does not display the translations within the learned words table. This Python script resolves these issues by producing CSV files of the vocabulary with English translations.
+Duolingo has a [built-in feature to display learned words](https://www.duolingo.com/words). However, this is only available for a number of languages (in my case, only for German). It also does not display the translations within the learned words table. This Python script resolves these issues by producing CSV files of the vocabulary with English translations, extracted from Duolingo's dictionary and [vocabulary overview](https://www.duolingo.com/vocabulary/overview).
 
 I am currently learning Norwegian (Bokmål) and Latin. I sometimes try the German and Irish Gaelic courses too. You can follow my language learning progress [here](https://www.duolingo.com/nmstreethran).
 
@@ -23,7 +23,7 @@ myusername = 'my_duolingo_username'
 mypassword = 'my_duolingo_password'
 ```
 
-After running this script, CSV and JSON files containing the vocabulary will be saved in the same directory, using the format `vocab_XX` in the extensions `.csv` and `.json` respectively. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of. When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Latin and Norwegian (Bokmål).
+After running this script, CSV and JSON files containing the vocabulary will be saved in the same directory, using the format `vocab_XX` in the extensions `.csv` and `.json` respectively. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of (mostly corresponding to [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)). When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Latin and Norwegian (Bokmål).
 
 **Code** | **Language** | **Latin alphabet?** | **Does it produce an output?**
 --- | --- | --- | ---
@@ -66,7 +66,3 @@ zh | Chinese | no | no
 
 [MIT License](LICENSE)
 
-## Credits
-
-- [Duolingo vocabulary overview](https://www.duolingo.com/vocabulary/overview): used to extract learned vocabulary
-- Duolingo dictionary (`https://d2.duolingo.com/api/1/dictionary/hints/<target>/<source>?token=<words>`): used to translate learned words into English
