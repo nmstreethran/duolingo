@@ -26,7 +26,7 @@ mypassword = 'my_duolingo_password'
 After running this script, CSV and JSON files containing the vocabulary will be saved in the same directory, using the format `vocab_XX` in the extensions `.csv` and `.json` respectively. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of. When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Latin and Norwegian (Bokmål).
 
 **Code** | **Language** | **Latin alphabet?** | **Does it produce an output?**
-- | - | - | -
+--- | --- | --- | ---
 ar | Arabic | no | yes
 cs | Czech | yes | yes
 cy | Welsh | yes | yes
