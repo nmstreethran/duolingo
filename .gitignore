@@ -114,3 +114,8 @@ login.py
 # VS Code settings
 .vscode/
 *.code-workspace
+
+# vocab
+*.csv
+*.json
+vocab/
