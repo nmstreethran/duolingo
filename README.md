@@ -2,7 +2,7 @@
 
 Extracting learned [Duolingo](https://www.duolingo.com/) vocabulary with their English translations using the unofficial Duolingo API and a Python script.
 
-Duolingo has a [built-in feature to display learned words](https://www.duolingo.com/words). However, this is only available for a number of languages (in my case, only for German). It also does not display the translations within the learned words table. This Python script resolves these issues by producing CSV files of the vocabulary with English translations, extracted from Duolingo's dictionary and [vocabulary overview](https://www.duolingo.com/vocabulary/overview).
+Duolingo has a [built-in feature to display learned words](https://www.duolingo.com/words). However, this is only available for a number of languages (in my case, only for German). It also does not display the translations within the learned words table. This Python script resolves these issues by producing CSV and PDF files of the vocabulary with English translations, extracted from Duolingo's dictionary and [vocabulary overview](https://www.duolingo.com/vocabulary/overview).
 
 I am currently learning Norwegian (Bokmål) and Latin. I sometimes try the German and Irish Gaelic courses too. You can follow my language learning progress [here](https://www.duolingo.com/nmstreethran).
 
@@ -11,6 +11,10 @@ I am currently learning Norwegian (Bokmål) and Latin. I sometimes try the Germa
 - [Unofficial Duolingo API by Kartik Talwar](https://github.com/KartikTalwar/Duolingo) 
 - [JSON](https://docs.python.org/3/library/json.html)
 - [Pandas](https://pandas.pydata.org/)
+
+## Other requirements
+
+A TeX distribution, such as [TeX Live 2019](http://tug.org/texlive/). Compiling the PDF files requires XeTeX and Makeglossaries, and [vocab.tex](vocab.tex).
 
 ## Running the script
 
@@ -23,7 +27,7 @@ myusername = 'my_duolingo_username'
 mypassword = 'my_duolingo_password'
 ```
 
-After running this script, CSV and JSON files containing the vocabulary will be saved in the same directory, using the format `vocab_XX` in the extensions `.csv` and `.json` respectively. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of (mostly corresponding to [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)). When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Latin and Norwegian (Bokmål).
+After running this script, CSV, JSON, TeX and PDF files containing the vocabulary will be saved in the same directory, using the naming convention `vocab_XX`. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of (mostly corresponding to [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)). When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Scottish Gaelic, Latin and Norwegian (Bokmål).
 
 **Code** | **Language** | **Latin alphabet?** | **Does it produce an output?**
 --- | --- | --- | ---
@@ -37,6 +41,7 @@ eo | Esperanto | yes | yes
 es | Spanish | yes | yes
 fr | French | yes | yes
 ga | Irish Gaelic | yes | yes
+gd | Scottish Gaelic | yes | yes
 he | Hebrew | no | yes
 hi | Hindi | no | yes
 hu | Hungarian | yes | yes
@@ -61,6 +66,10 @@ tr | Turkish | yes | yes
 uk | Ukrainian | no | yes
 vi | Vietnamese | yes | yes
 zh | Chinese | no | no
+
+## Contributing
+
+Feel free to open an issue or pull request, or email me at nmstreethran at gmail dot com.
 
 ## License
 

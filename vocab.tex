@@ -1,0 +1,26 @@
+\documentclass[9pt,a4paper,twoside]{article}
+\usepackage{geometry}
+\geometry{lmargin=3.5cm,rmargin=1.5cm,tmargin=2.5cm,bmargin=2.5cm}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+% import desired font
+\usepackage{ebgaramond}
+% section title font config
+\usepackage{sectsty}
+\allsectionsfont{\centering\scshape\bfseries}
+% set up glossary
+\newcommand*{\glossaryname}{Dictionary}
+\usepackage[nonumberlist]{glossaries}
+\newcommand{\dictentry}[2]{%
+  \newglossaryentry{#1}{name={#1},description={#2}}%
+  \glslink{#1}{}%
+}
+\makeglossaries
+\glsaddall
+
+\begin{document}
+  \input{vocab_.tex}
+  \begin{multicols}{3}
+    \printglossary[nogroupskip,style=list,nopostdot]%
+  \end{multicols}
+\end{document}
