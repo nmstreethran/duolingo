@@ -6,13 +6,13 @@ Duolingo has a [built-in feature to display learned words](https://www.duolingo.
 
 I am currently learning Norwegian (Bokmål) and Latin. I sometimes try the German and Irish Gaelic courses too. You can follow my language learning progress [here](https://www.duolingo.com/nmstreethran).
 
-## Required Python packages
+## Requirements
 
+Python packages:
 - [Unofficial Duolingo API by Kartik Talwar](https://github.com/KartikTalwar/Duolingo) 
 - [JSON](https://docs.python.org/3/library/json.html)
 - [Pandas](https://pandas.pydata.org/)
-
-## Other requirements
+- [os](https://docs.python.org/3/library/os.html)
 
 A TeX distribution, such as [TeX Live 2019](http://tug.org/texlive/). Compiling the PDF files requires XeTeX and Makeglossaries, and [vocab.tex](vocab.tex).
 

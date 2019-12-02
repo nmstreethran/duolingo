@@ -89,7 +89,7 @@ for l, lang in language:
     # convert vocab into latex glossary
     file = open('vocab_.tex', 'w')
     file.write(
-        # set glossary nave via a latex command
+        # set glossary name via a latex command
         r'\renewcommand{\glossaryname}{' + lang + ' -- English Dictionary}\n')
     for index, row in vocab_df.iterrows():
         file.write(
