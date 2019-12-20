@@ -386,21 +386,8 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
-
-# Other files / folders --------------------------------
-
-## login information
-login.py
-
-# VS Code settings
+# user files
 .vscode/
 *.code-workspace
-
-# vocab
-*.csv
-*.json
-vocab/
 vocab_*
-*.pdf
-test*
-tex2pdf*/
+draft/*

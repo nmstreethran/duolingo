@@ -6,8 +6,9 @@ import pandas
 import os
 
 #%%
-# import login information saved in a separate file (login.py)
-from login import myusername, mypassword
+# input login information in command line
+myusername = input('Enter your Duolingo username: ')
+mypassword = input('Enter your Duolingo password: ')
 
 #%%
 # enter login information

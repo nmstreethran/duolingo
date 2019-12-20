@@ -14,18 +14,19 @@ Python packages:
 - [Pandas](https://pandas.pydata.org/)
 - [os](https://docs.python.org/3/library/os.html)
 
-A TeX distribution, such as [TeX Live 2019](http://tug.org/texlive/). Compiling the PDF files requires XeTeX and Makeglossaries, and [vocab.tex](vocab.tex).
+A TeX distribution, such as [TeX Live 2019](http://tug.org/texlive/) is needed to produce PDFs. Compiling the PDF files using [vocab.tex](vocab.tex) requires XeLaTeX and Makeglossaries. The compilation is done as follows:
+
+```sh
+xelatex vocab.tex
+makeglossaries vocab
+xelatex vocab.tex
+```
 
 ## Running the script
 
 Python script: [duolingo_data.py](duolingo_data.py)
 
-`login.py` stores the username and password. For example:
-
-```py
-myusername = 'my_duolingo_username'
-mypassword = 'my_duolingo_password'
-```
+You will be prompted to enter your Duolingo username and password in the terminal.
 
 After running this script, CSV, JSON, TeX and PDF files containing the vocabulary will be saved in the same directory, using the naming convention `vocab_XX`. `XX` refers to the language code as defined by Duolingo. The codes in the table below are the ones I am aware of (mostly corresponding to [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)). When tested with the dictionary URL (`https://d2.duolingo.com/api/1/dictionary/hints/en/XX?token=hello`), the languages denoted `yes` produced an output. However, this script is not guaranteed to work for all languages that produced an output, especially ones with non-latin alphabets, as it has only been tested with German, Irish Gaelic, Scottish Gaelic, Latin and Norwegian (Bokmål).
 
@@ -69,7 +70,7 @@ zh | Chinese | no | no
 
 ## Contributing
 
-Feel free to open an issue or pull request, or email me at nmstreethran at gmail dot com.
+Feel free to open an issue or pull request.
 
 ## License
 
