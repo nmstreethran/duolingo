@@ -4,11 +4,12 @@ import duolingo
 import json
 import pandas
 import os
+import getpass
 
 #%%
 # input login information in command line
 myusername = input('Enter your Duolingo username: ')
-mypassword = input('Enter your Duolingo password: ')
+mypassword = getpass.getpass('Enter your Duolingo password: ')
 
 #%%
 # enter login information
@@ -91,7 +92,7 @@ for l, lang in language:
     file = open('vocab_.tex', 'w')
     file.write(
         # set glossary name via a latex command
-        r'\renewcommand{\glossaryname}{' + lang + ' -- English Dictionary}\n')
+        r'\chapter*{\MakeLowercase{' + lang + ' -- English Dictionary}}\n')
     for index, row in vocab_df.iterrows():
         file.write(
             '\dictentry{' + str(row['word_string']) + '}{'

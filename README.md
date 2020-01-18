@@ -13,6 +13,7 @@ Python packages:
 - [JSON](https://docs.python.org/3/library/json.html)
 - [Pandas](https://pandas.pydata.org/)
 - [os](https://docs.python.org/3/library/os.html)
+- [getpass](https://docs.python.org/3/library/getpass.html)
 
 A TeX distribution, such as [TeX Live 2019](http://tug.org/texlive/) is needed to produce PDFs. Compiling the PDF files using [vocab.tex](vocab.tex) requires XeLaTeX and Makeglossaries. The compilation is done as follows:
 

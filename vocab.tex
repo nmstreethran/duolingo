@@ -1,4 +1,4 @@
-\documentclass[a4paper,twoside]{article}
+\documentclass[a4paper,twoside]{book}
 % to avoid overfulls in right margin
 \emergencystretch 3em
 \usepackage{geometry}
@@ -21,9 +21,8 @@
 \renewcommand{\headrulewidth}{0pt}
 % page number
 \fancyfoot[C]{\LARGE\thepage}
-% }
 % set up glossary
-\newcommand*{\glossaryname}{Dictionary}
+\newcommand*{\glossaryname}{\vspace{-3.87cm}}
 \usepackage[nonumberlist]{glossaries}
 \newcommand{\dictentry}[2]{%
     \newglossaryentry{#1}{name={#1},description={#2}}%
