@@ -32,6 +32,7 @@ languageList = list(filter(None, languageList))
 # dictionary of languages and their codes
 languageCodes = {
     'Arabic': 'ar',
+    'Chinese': 'zh',
     'Czech': 'cz',
     'Danish': 'da',
     'Dutch': 'nl',
@@ -69,21 +70,21 @@ languageCodes = {
 
 #%%
 # get list of languages learned by the user and their codes
-language = []
-for l in languageList:
-    for k, v in languageCodes.items():
-        if k == l:
-            language.append((v, k))
+languages = []
+for language in languageList:
+    for n, c in languageCodes.items():
+        if n == language:
+            languages.append((c, n))
 
 #%%
 # extracting data for each language in a loop
-for l, lang in language:
+for code, name in languages:
     # extract vocabulary data from duolingo's vocabulary overview
-    vocab = lingo.get_vocabulary(language_abbr=l)
+    vocab = lingo.get_vocabulary(language_abbr=code)
 
     # save vocabulary data as json
     # use indent > 0 to pretty print the output
-    with open('vocab_' + l + '.json', 'w') as f:
+    with open('vocab_' + code + '.json', 'w') as f:
         json.dump(vocab, f, indent=2)
 
     # convert vocabulary overview to dataframe
@@ -109,7 +110,7 @@ for l, lang in language:
     # translate each chunk and merge into the dataframe in a loop
     for t in word_list:
         # get translations from duolingo's dictionary
-        trnslt = lingo.get_translations(t, source='en', target=l)
+        trnslt = lingo.get_translations(t, source='en', target=code)
 
         # convert translation dictionary to dataframe
         trnslt_df = pandas.DataFrame(dict(
@@ -141,13 +142,13 @@ for l, lang in language:
 
     # save vocabulary data as csv
     # use cp1252 encoding to print accented latin characters
-    vocab_df.to_csv('vocab_' + l + '.csv', encoding='cp1252', index=None)
+    vocab_df.to_csv('vocab_' + code + '.csv', encoding='cp1252', index=None)
 
     # convert vocab into latex glossary
     file = open('vocab_.tex', 'w')
     file.write(
         # set glossary name via a latex command
-        r'\chapter*{\MakeLowercase{' + lang + ' -- English Dictionary}}\n')
+        r'\chapter*{\MakeLowercase{' + name + ' -- English Dictionary}}\n')
     for index, row in vocab_df.iterrows():
         file.write(
             '\dictentry{' + str(row['word_string']) + '}{'
@@ -160,5 +161,5 @@ for l, lang in language:
     os.system('xelatex vocab.tex')
 
     # rename latex glossary and pdf output to match the language
-    os.rename('vocab_.tex', 'vocab_' + l + '.tex')
-    os.rename('vocab.pdf', 'vocab_' + l + '.pdf')
+    os.rename('vocab_.tex', 'vocab_' + code + '.tex')
+    os.rename('vocab.pdf', 'vocab_' + code + '.pdf')
