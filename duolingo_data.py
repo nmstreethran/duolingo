@@ -5,6 +5,7 @@ import json
 import pandas
 import os
 import getpass
+import configparser
 
 #%%
 # input login information in command line
@@ -15,10 +16,64 @@ mypassword = getpass.getpass('Enter your Duolingo password: ')
 # enter login information
 lingo = duolingo.Duolingo(myusername, password=mypassword)
 
+# %%
+# import list of languages learned by user
+config = configparser.ConfigParser()
+config.read('languages.conf')
+
+# %%
+# convert to list
+languageList = [
+    z.strip() for z in config.get('languages', 'languages').split('\n')]
+# remove empty strings
+languageList = list(filter(None, languageList))
+
 #%%
-# list of languages
-language = [('nb', 'Norwegian (Bokmål)'), ('de', 'German'),
-    ('ga', 'Irish Gaelic'), ('gd', 'Scottish Gaelic'), ('la', 'Latin')]
+# dictionary of languages and their codes
+languageCodes = {
+    'Arabic': 'ar',
+    'Czech': 'cz',
+    'Danish': 'da',
+    'Dutch': 'nl',
+    'Esperanto': 'eo',
+    'French': 'fr',
+    'German': 'de',
+    'Greek': 'el',
+    'Hawaiian': 'hw',
+    'Hebrew': 'he',
+    'High Valyrian': 'hv',
+    'Hindi': 'hi',
+    'Hungarian': 'hu',
+    'Indonesian': 'id',
+    'Irish Gaelic': 'ga',
+    'Italian': 'it',
+    'Japanese': 'jp',
+    'Klingon': 'tlh',
+    'Korean': 'ko',
+    'Latin': 'la',
+    'Navajo': 'nv',
+    'Norwegian (Bokmål)': 'nb',
+    'Polish': 'pl',
+    'Portuguese': 'pt',
+    'Romanian': 'ro',
+    'Russian': 'ru',
+    'Scottish Gaelic': 'gd',
+    'Spanish': 'es',
+    'Swahili': 'sw',
+    'Swedish': 'sv',
+    'Turkish': 'tr',
+    'Ukranian': 'uk',
+    'Vietnamese': 'vi',
+    'Welsh': 'cy',
+}
+
+#%%
+# get list of languages learned by the user and their codes
+language = []
+for l in languageList:
+    for k, v in languageCodes.items():
+        if k == l:
+            language.append((v, k))
 
 #%%
 # extracting data for each language in a loop
