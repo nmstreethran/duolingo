@@ -1,7 +1,7 @@
 # Duolingo
 
 <!-- start licence badges -->
-[![Markdown link check GitHub issues](https://img.shields.io/github/issues/nmstreethran/duolingo/markdown%20links?color=limegreen&label=Link%20check%20issues&logo=markdown&labelColor=darkslategray)](https://github.com/nmstreethran/duolingo/issues?q=is%3Aissue+is%3Aopen+label%3A%22markdown+links%22)
+[![Markdown link checker GitHub issues](https://img.shields.io/github/issues/nmstreethran/duolingo/link%20checker?color=limegreen&label=Link%20checker%20issues&labelColor=darkslategray)](https://github.com/nmstreethran/duolingo/issues?q=is%3Aissue+is%3Aopen+label%3A%22link+checker%22)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?labelColor=darkslategray)](https://opensource.org/licenses/MIT)
 <!-- end license badges -->
 

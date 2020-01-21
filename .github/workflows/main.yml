@@ -16,4 +16,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Link Checker Report
           content-filepath: ./link-checker/out.md
-          labels: report, automated issue, markdown links
+          labels: report, automated issue, link checker
